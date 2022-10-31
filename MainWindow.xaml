@@ -1,0 +1,30 @@
+﻿<Window x:Class="WPFApp2_9_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApp2_9_"
+        mc:Ignorable="d"
+        Title="Практическая работа №2" ResizeMode="NoResize" Height="450" Width="800">
+    <Grid>
+        <Menu VerticalAlignment="Top" Foreground="Black">
+            <MenuItem Header="Файл">
+                <MenuItem Foreground="Black" Header="Загрузить" x:Name="SaveFileBut" Click="UploadFileBut_Click" />
+                <MenuItem Foreground="Black"  Header="Сохранить" x:Name="UploadFileBut" Click="SaveFileBut_Click"/>
+                <MenuItem Foreground="Black"  Header="Выход" x:Name="CloseProgBut" Click="CloseProgBut_Click"/>
+            </MenuItem>
+            <MenuItem Header="Справка">
+                <MenuItem Foreground="Black" Header="Задание" x:Name="ShowTaskBut" Click="ShowTaskBut_Click"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid Margin="0,18,0,217" x:Name="ArrNums" IsReadOnly="True" Background="Transparent" Foreground="Black" />
+        <TextBox Background="Transparent" Foreground="Black" x:Name="ArrLenght" HorizontalAlignment="Left" Margin="186,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="ArrLenght_TextChanged"/>
+        <Label Foreground="Black" Content="Длина массива" HorizontalAlignment="Left" Margin="200,229,0,0" VerticalAlignment="Top"/>
+        <Button Background="Transparent" Foreground="Black" Content="Очистка" HorizontalAlignment="Left" Margin="314,339,0,0" VerticalAlignment="Top" x:Name="ClearArrBut" Click="ClearArrBut_Click" Width="118"/>
+        <TextBox Background="Transparent" Foreground="Black" IsReadOnly="True" HorizontalAlignment="Left" Margin="314,306,0,0" x:Name="resPow" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
+        <Label Foreground="Black" Content="Результат" HorizontalAlignment="Left" Margin="336,280,0,0" VerticalAlignment="Top"/>
+        <Button Background="Transparent" Foreground="Black" Content="Рассчитать" HorizontalAlignment="Left" Margin="316,364,0,0" VerticalAlignment="Top" Width="116" x:Name="resButton" Click="resButton_Click"/>
+        <TextBox Background="Transparent" Foreground="Black" x:Name="maxRandNum" HorizontalAlignment="Left" Margin="425,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="ArrLenght_TextChanged"/>
+        <Label Foreground="Black" Content="Максимальное значение для случ. числа" HorizontalAlignment="Left" Margin="382,229,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
